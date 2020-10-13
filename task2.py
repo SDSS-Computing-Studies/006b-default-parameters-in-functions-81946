@@ -10,4 +10,5 @@ import assignment
 
 #print( assignment.quadratic(3,5,-8) )
 
-print( assignment.solution(-8.9, 5.3) )
+print( assignment.solution([-8.9, 5.3]) )
+

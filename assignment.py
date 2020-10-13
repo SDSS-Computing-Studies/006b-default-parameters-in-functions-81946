@@ -87,12 +87,15 @@ def toRadians(degrees):
 def convertAngle():
     pass
 
-def solution(answer1, answer2):
-        if answer1>0:
-                return answer1
+def solution(quadratic):
+        quadratic.sort()
+        if int(quadratic[0])>0:
+                answer= (quadratic[0])
+                return answer
         
-        if answer2>0:
-                return answer2
+        if int(quadratic[1])>0:
+                answer= (quadratic[1])
+                return answer
 
 
 
