@@ -83,10 +83,6 @@ def toRadians(degrees):
 
 
 
-
-def convertAngle():
-    pass
-
 def solution(quadratic):
         quadratic.sort()
         if int(quadratic[0])>0:
