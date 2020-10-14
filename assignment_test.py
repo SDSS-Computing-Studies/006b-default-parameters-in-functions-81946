@@ -13,6 +13,7 @@ def test2():
 
 
 def test3():
+  # output list needs to be sorted
   x1,x2 = assignment.quadratic(3,5,-8)
   assert round(x1,2) == -2.67
   assert round(x2,2) == 1
@@ -27,3 +28,6 @@ def test5():
   answer = assignment.cosineLaw(10,3,50,oppositeSide=False)
   assert round(answer,1) == 11.7 
 
+
+x1,x2 = assignment.quadratic(3,5,-8)
+print(test3())

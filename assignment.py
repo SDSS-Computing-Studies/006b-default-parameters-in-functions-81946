@@ -66,13 +66,20 @@ def factorPair(number, factor):
 #(x points) 
     
 
-def cosineLaw(a,b,toRadians):
-    c_2= math.pow(a,2) + math.pow(b,2)
-    c_1=(2*a*b) 
-    c_3= math.cos(toRadians)*c_1
-    c_4= c_2 - c_3
-    c= math.sqrt(c_4)
-    return c
+def cosineLaw(a,b,degrees,oppositeSide=True):
+        if oppositeSide == True:
+                c_2= math.pow(a,2) + math.pow(b,2)
+                c_1=(2*a*b) 
+
+                degrees= float(degrees)
+                x= degrees*(math.pi/180)
+
+                c_3= math.cos(x)*c_1
+                c_4= c_2 - c_3
+                c= math.sqrt(c_4)
+        else:
+                pass
+        return c
 
 
 
@@ -107,7 +114,8 @@ def quadratic(a,b,c):
     answer2= x22/(2*a)
 
 
-    lists=[answer1,answer2]
+    lists=[answer2,answer1]
+    
     return lists
 
 
