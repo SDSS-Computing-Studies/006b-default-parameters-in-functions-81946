@@ -78,7 +78,13 @@ def cosineLaw(a,b,degrees,oppositeSide=True):
                 c_4= c_2 - c_3
                 c= math.sqrt(c_4)
         else:
-                pass
+                cosb= math.pow(a,2) + math.pow(b,2)
+                cosb_1= (2*a*b)
+
+                degrees= float(degrees)
+                x= degrees*(math.pi/180)
+
+                cosbnow= cosb - 
         return c
 
 
