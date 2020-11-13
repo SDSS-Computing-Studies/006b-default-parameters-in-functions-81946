@@ -64,64 +64,110 @@ def factorPair(number, factor):
 #one positive, this will help us decide which should be the length of the missing side.
 #Return this value.
 #(x points) 
-    
 
-def cosineLaw(a,b,degrees,oppositeSide=True):
-        if oppositeSide == True:
-                c_2= math.pow(a,2) + math.pow(b,2)
-                c_1=(2*a*b) 
+a= input("Enter side a: ")
+a= float(a)
+b= input("Enter side b: ")
+b= float(b)
+degrees= input("Enter the angle in degrees: ")
+degrees= float(degrees)
+oppositeSide= input("side?True or False")
 
-                degrees= float(degrees)
-                x= degrees*(math.pi/180)
+def cosineLaw(a,b,toRadians,oppositeSide=True):
+        import math
+        if oppositeSide == "True" or "true":
+                #c^2 = a^2 + b^2 - 2*a*b*cos(C)
+                parta1= math.pow(a,2) + math.pow(b,2)
+                parta2= (2*a*b)
+                parta2_1= math.cos(toRadians)
+                parta3= parta2*parta2_1
+                parta4= parta1-parta3
+                return parta4
 
-                c_3= math.cos(x)*c_1
-                c_4= c_2 - c_3
-                c= math.sqrt(c_4)
         else:
-                cosb= math.pow(a,2) + math.pow(b,2)
-                cosb_1= (2*a*b)
-
-                degrees= float(degrees)
-                x= degrees*(math.pi/180)
-
-                cosbnow= cosb - 
-        return c
-
+                idk
 
 
 def toRadians(degrees):
-    degrees= float(degrees)
-    answer= degrees*(math.pi/180)
-    return answer
+        import math
+        x= math.pi/180
+        y= degrees*x
+        return y
 
 
 
-def solution(quadratic):
-        quadratic.sort()
-        if int(quadratic[0])>0:
-                answer= (quadratic[0])
-                return answer
-        
-        if int(quadratic[1])>0:
-                answer= (quadratic[1])
-                return answer
+def solution():
 
 
 
 
-def quadratic(a,b,c):
-    import math
 
-    x11=-b+(math.sqrt(b**2-4*a*c))
-    answer1= x11/(2*a)
+def quadratic(a,b,cosineLaw):
 
 
-    x22=-b-(math.sqrt(b**2-4*a*c))
-    answer2= x22/(2*a)
 
 
-    lists=[answer2,answer1]
-    
-    return lists
 
-
+#def cosineLaw(a,b,degrees,oppositeSide=True):
+#        if oppositeSide == True:
+#                c_2= math.pow(a,2) + math.pow(b,2)
+#                c_1=(2*a*b) 
+#
+#                degrees= float(degrees)
+#                x= degrees*(math.pi/180)
+#
+#                c_3= math.cos(x)*c_1
+#                c_4= c_2 - c_3
+#                c= math.sqrt(c_4)
+#                return c
+#        else:
+#                cosb= math.pow(a,2) + math.pow(b,2)
+#                cosb_1= (2*a*b)
+#                
+#
+#                degrees= float(degrees)
+#                x= degrees*(math.pi/180)
+#
+#                new= cosb_1*
+#
+#                cosbnow= cosb - cos_b1
+#
+#
+#        return 
+#
+#
+#
+#def toRadians(degrees):
+#    degrees= float(degrees)
+#    answer= degrees*(math.pi/180)
+#    return answer
+#
+#
+#
+#def solution(quadratic):
+#        quadratic.sort()
+#        if int(quadratic[0])>0:
+#                answer= (quadratic[0])
+#                return answer
+#        
+#        if int(quadratic[1])>0:
+#                answer= (quadratic[1])
+#                return answer
+#
+#
+#
+#
+#def quadratic(a,b,c):
+#    import math
+#
+#    x11=-b+(math.sqrt(b**2-4*a*c))
+#    answer1= x11/(2*a)
+#
+#
+#    x22=-b-(math.sqrt(b**2-4*a*c))
+#    answer2= x22/(2*a)
+#
+#
+#    lists=[answer2,answer1]
+#    
+#    return lists
