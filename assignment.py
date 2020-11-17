@@ -72,7 +72,7 @@ b= float(b)
 degrees= input("Enter the angle in degrees: ")
 degrees= float(degrees)
 oppositeSide= input("Side? True or False: ")
-lists= []
+
 
 
 def toRadians(degrees):
@@ -101,14 +101,15 @@ def cosineLaw(a,b,y,oppositeSide):
 
 
 def solution(lists):
-        pass
-    #if int(lists[0])>0:
-    #    answer= (lists[0])
-    #    return answer
-#
-    #if int(lists[1])>0:
-    #    answer= (lists[1])
-    #    return answer
+    listsy= quadratic(lists)
+    print(listsy)
+    if int(listsy[0])>0:
+        answer= (listsy[0])
+        return answer
+
+    if int(listsy[1])>0:
+        answer= (listsy[1])
+        return answer
 
 
 
@@ -119,12 +120,13 @@ def quadratic(a,b,c):
     answer1 = x1/(2*a)
     x2=   -1*b - math.sqrt(b**2-4*a*c)
     answer2= x2/(2*a)
-    lists=[answer2,answer1]   
+    lists.append(answer1)  
+    lists.append(answer2) 
     lists.sort() 
+    print(lists)
     return lists  
 
-
-print( quadratic(a,b,c) )
+print( solution(lists) )
 
 
 #def cosineLaw(a,b,degrees,oppositeSide=True):
